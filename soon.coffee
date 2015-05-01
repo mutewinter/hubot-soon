@@ -51,5 +51,5 @@ images = [
 images = images.concat process.env.HUBOT_MORE_SOON_IMAGES.split ',' if process.env.HUBOT_MORE_SOON_IMAGES
 
 module.exports = (robot) ->
-  robot.hear /\bso[o]+n\b/i, (msg) ->
+  robot.hear /^so[o]+n$/i, (msg) ->
     msg.send msg.random images
